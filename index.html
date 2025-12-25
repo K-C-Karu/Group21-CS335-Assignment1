@@ -3,6 +3,7 @@
     <head>
         <title>Group21-Simple Info Hub-Landing Page</title>
         <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <nav>
@@ -27,9 +28,26 @@
                         <li><a class="nav-links" href="#">Feedback</a></li>
                     </ul>
                     
-                    <button class="menu-btn"><img src="" ></button>                  
+                    <button class="menu-btn"><img src="images/icons/menu_icon.png" ></button>                  
                 </div>
             </div>
         </nav>
+        <script>
+            const btn = document.querySelector(".menu-btn");
+            const nav = document.querySelector(".nav-list");
+
+            // Toggle menu when button is clicked
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation(); // prevent document click from firing
+                nav.classList.toggle("active");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove("active");
+                }
+            });
+        </script>
     </body>
 </html>
