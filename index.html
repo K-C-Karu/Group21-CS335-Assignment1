@@ -48,7 +48,69 @@
                 background-color: rgb(255, 255, 255); 
                 color: rgb(79, 70, 229);
             }
-            
+
+            .features {
+                padding-top: 5rem;              
+                padding-bottom: 5rem;
+                background-color: rgb(249, 250, 251); 
+            }
+
+            .features-container {
+                width: 100%;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                text-align: center;
+            }
+            @media (min-width: 640px) {
+                .features-container {
+                    max-width: 640px;
+                }
+            }
+            .features-subcontainer {
+                display: grid;
+                gap: 2rem;
+            }
+
+            @media (min-width: 768px) {
+                .hero-container {
+                    flex-direction: row; 
+                }
+
+                .hero-subcontainer {
+                    width: 50%;      
+                }
+
+                .features-container {
+                    max-width: 768px;
+                }
+                
+                .features-subcontainer {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            .features-card {
+                background-color: rgb(255, 255, 255);
+                padding: 1.5rem;       
+                border-radius: 0.25rem; 
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                transition: all 0.2s ease-in-out;
+            }
+
+            .features-card:hover {
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            .features-card div {
+                color: #4f46e5;
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+                margin-bottom: 1rem;
+            }
+
         </style>
     </head>
     <body>
@@ -86,6 +148,30 @@
                     <div>
                         <a href="#"><button class="btn">Explore Now</button></a>
                         <a href="#"><button class="btn">About the Platform</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="features-container">
+                <h2 class="font-size: 1.875rem;line-height: 2.25rem;font-weight: 700;margin-bottom: 1.5rem;">Why Choose Us</h2>
+                <p class="color: #4b5563;margin-bottom: 3rem;">We share clear, useful, and up-to-date information to help visitors stay informed easily and quickly.</p>
+
+                <div class="features-subcontainer">
+                    <div class="features-card">
+                        <div><i class="fas fa-rocket"></i></div>
+                        <h3 class="font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 0.5rem;">Easy To Use</h3>
+                        <p class="color: #4b5563;">Simple layout that makes it easy for anyone to find information without confusion.</p>
+                    </div>
+                    <div class="features-card">
+                        <div><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 0.5rem;">Reliable Information</h3>
+                        <p class="color: #4b5563;">All content is well organized and regularly updated to ensure accuracy and trust.</p>
+                    </div>
+                    <div class="features-card">
+                        <div><i class="fas fa-cogs"></i></div>
+                        <h3 class="font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 0.5rem;">Quick Access</h3>
+                        <p class="color: #4b5563;">Information is available in one place, saving time and making browsing convenient.</p>
                     </div>
                 </div>
             </div>
