@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .faq {
+            margin: 10px 0;
+        }
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .answer {
+            display: none;
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frequently Asked Questions (FAQs)</h1>
+
+    <div class="faq">
+        <div class="question">What is this system used for?</div>
+        <div class="answer">This system is designed to help users [describe purpose here].</div>
+    </div>
+
+    <div class="faq">
+        <div class="question">How do I create an account?</div>
+        <div class="answer">To create an account, click the 'Sign Up' button and fill in your details.</div>
+    </div>
+
+    <div class="faq">
+        <div class="question">Is the system free to use?</div>
+        <div class="answer">Yes, the basic version of the system is free. Some advanced features may require payment.</div>
+    </div>
+
+    <div class="faq">
+        <div class="question">How can I reset my password if I forget it?</div>
+        <div class="answer">Click 'Forgot Password' on the login page and follow the instructions to reset your password.</div>
+    </div>
+
+    <div class="faq">
+        <div class="question">Who can I contact if I face a problem using the system?</div>
+        <div class="answer">You can contact our support team at support@example.com for any issues.</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const questions = document.querySelectorAll('.question');
+            questions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const answer = q.nextElementSibling;
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none";
+                    } else {
+                        answer.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
