@@ -6,9 +6,265 @@
     <title>FAQs Page</title>
     <style>
         body {
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+    color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+    min-height: 100dvh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    max-width:100%;
+    max-height:4.75rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.navcontainer {
+    position:relative;
+    max-height:4.75rem;
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing:border-box;
+    
+}
+
+.tabs-container {
+    display:flex;
+    flex-direction:row;
+}
+
+.nav-tabs {
+    display: flex;
+    flex-direction: row;    
+    list-style: none;
+    margin:auto;
+    
+    gap: 1rem;
+    flex-wrap: wrap;
+    overflow:hidden;
+    min-width: 0;
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
+.navcontainer h1{
+    font-size: 1.5rem;   
+    line-height: 1.75rem;
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgb(67 56 202 / var(--tw-text-opacity, 1));
+}
+
+.nav-list.active {
+    display: flex;
+}
+
+.nav-links {
+    display: inline-block;   
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+.nav-links:hover {
+    color: rgb(79 70 229);
+    border-color:rgb(78, 70, 229);
+    cursor: pointer;
+}
+
+.menu-btn {
+    position:absolute;
+    top:14.5rem;
+    left:4.625rem;
+    font-size: 1.5rem;
+    padding-top:0.35rem;
+    background: none;
+    border-style:solid;
+    border-radius:0.25rem;
+    border-color:transparent;
+    display:block;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.menu-btn:hover {
+    border-color:rgb(82, 81, 81);
+    cursor: pointer;
+}
+
+.menu-container {
+    position:relative;
+    right: 0;             
+    transition: right 1.0s ease-in-out;
+    padding: 0;
+    margin: 0;
+    width:12.5rem;
+    height:31.25rem;
+    box-sizing:border-box;
+}
+
+@media (min-width: 1250px) {
+    .menu-container {
+        right:-6.25rem;
+    }
+}
+
+@media (min-width: 1149px) {
+    .menu-container {
+        right:-3.25rem;
+    }
+}
+
+.nav-list {
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow:hidden;
+    min-width: 0;
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+    width:6.95rem;
+    display: none;
+    position: absolute;
+    top:16.5rem;
+    background: white;
+    padding: 0.75rem 0.75rem 1.25rem 4.25rem;
+    flex-direction: column;
+    box-shadow: -2px 6px 7px rgba(0,0,0,0.1);
+}
+
+         .hero {
+                background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+                color: white;
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
+            .hero-container {
+                max-width: 1200px; 
+                margin:auto;
+                padding-left: 1.5rem;  
+                padding-right: 1.5rem;
+
+                display: flex;         
+                flex-direction: column;
+                align-items: center;   
+            }
+
+            .hero-subcontainer {
+                width: 100%;        
+            }
+          
+            .hero-subcontainer > * + * {
+                margin-top: 1.5rem;  
+            }
+
+            .hero-subcontainer div > * + * {
+                margin-left: 1rem; 
+            }
+
+            .btn {
+                background-color:transparent;
+                padding: 0.5rem 1.5rem;  
+                border: 0.0625rem solid white; 
+                border-radius: 0.25rem;              
+                font-weight: 600;               
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+            }
+
+            .btn:hover {
+                background-color: rgb(255, 255, 255); 
+                color: rgb(79, 70, 229);
+            }
+
+            .features {
+                padding-top: 5rem;              
+                padding-bottom: 5rem;
+                background-color: rgb(249, 250, 251); 
+            }
+
+            .features-container {
+                width: 100%;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                text-align: center;
+            }
+            @media (min-width: 640px) {
+                .features-container {
+                    max-width: 640px;
+                }
+            }
+            .features-subcontainer {
+                display: grid;
+                gap: 2rem;
+            }
+
+            @media (min-width: 768px) {
+                .hero-container {
+                    flex-direction: row; 
+                }
+
+                .hero-subcontainer {
+                    width: 50%;      
+                }
+
+                .features-container {
+                    max-width: 768px;
+                }
+                
+                .features-subcontainer {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            .features-card {
+                background-color: rgb(255, 255, 255);
+                padding: 1.5rem;       
+                border-radius: 0.25rem; 
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                transition: all 0.2s ease-in-out;
+            }
+
+            .features-card:hover {
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            .features-card div {
+                color: #4f46e5;
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+                margin-bottom: 1rem;
+            }
+
+            footer{
+                text-align: center;
+                font-size: 0.875rem;  
+                line-height: 1.25rem; 
+                margin-top: auto;
+                padding: 0.75rem 0;  
+                width: 100%;
+                border-top: 1px solid rgb(55, 65, 81);   
+                background-color: rgb(17, 24, 39);      
+                color: rgb(156, 163, 175);
+            }
+        body {
             font-family: Arial, sans-serif;
             margin: 40px;
-            background-color: #b80cad;
+            background-color: hsla(295, 32%, 53%, 0.637);
         }
         h1 {
             text-align: center;
@@ -42,6 +298,32 @@
     </style>
 </head>
 <body>
+     <nav>
+            <div class="navcontainer">
+                <h1>Group21</h1>
+                <div class="tabs-container">
+                    <ul class="nav-tabs">
+                        <li><a class="nav-links" href="index.html">Home</a></li>
+                        <li><a class="nav-links" href="#">About</a></li>
+                        <li><a class="nav-links" href="#">Services</a></li>
+                    </ul> 
+                </div>
+                <div class="menu-container">   
+                    <ul class="nav-list">
+                        <li><a class="nav-links" href="#">Gallery</a></li>
+                        <li><a class="nav-links" href="#">News</a></li>
+                        <li><a class="nav-links" href="#">Events</a></li>
+                        <li><a class="nav-links" href="Subscribe.html">Subscribe</a></li>
+                        <li><a class="nav-links" href="faqs.html">faqs</a></li>
+                        <li><a class="nav-links" href="#">Blog</a></li>
+                        <li><a class="nav-links" href="#">Contacts</a></li>
+                        <li><a class="nav-links" href="#">Feedback</a></li>
+                    </ul>
+                    
+                    <button class="menu-btn"><img src="images/icons/menu_icon.png" ></button>                  
+                </div>
+            </div>
+        </nav>
     <h1>Frequently Asked Questions (FAQs)</h1>
 
     <div class="faq">
@@ -66,10 +348,28 @@
 
     <div class="faq">
         <div class="question">Who can I contact if I face a problem using the system?</div>
-        <div class="answer">You can contact our support team at support@example.com for any issues.</div>
+        <div class="answer">You can contact our support team at zaawaadi@gmail.com for any issues.</div>
     </div>
 
+     <footer>
+                © 2025 Group21. All rights reserved.
+        </footer>
     <script>
+         const btn = document.querySelector(".menu-btn");
+            const nav = document.querySelector(".nav-list");
+
+            // Toggle menu when button is clicked
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation(); // prevent document click from firing
+                nav.classList.toggle("active");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove("active");
+                }
+            });
         const questions = document.querySelectorAll('.question');
         questions.forEach(q => {
             q.addEventListener('click', () => {
