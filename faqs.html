@@ -8,20 +8,35 @@
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
+            background-color: #b80cad;
         }
         h1 {
             text-align: center;
         }
         .faq {
+            background-color: #ffffff;
+            border-radius: 8px;
             margin: 10px 0;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .question {
             cursor: pointer;
             font-weight: bold;
+            position: relative;
+            padding-right: 20px;
+        }
+        .question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+        }
+        .question.active::after {
+            content: '-';
         }
         .answer {
             display: none;
-            margin-top: 5px;
+            margin-top: 10px;
             padding-left: 10px;
         }
     </style>
@@ -55,17 +70,12 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const questions = document.querySelectorAll('.question');
-            questions.forEach(q => {
-                q.addEventListener('click', () => {
-                    const answer = q.nextElementSibling;
-                    if (answer.style.display === "block") {
-                        answer.style.display = "none";
-                    } else {
-                        answer.style.display = "block";
-                    }
-                });
+        const questions = document.querySelectorAll('.question');
+        questions.forEach(q => {
+            q.addEventListener('click', () => {
+                q.classList.toggle('active');
+                const answer = q.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
             });
         });
     </script>
