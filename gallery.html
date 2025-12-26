@@ -154,8 +154,26 @@
         <section class="hero">
             <div class="hero-container">
                 <div class="hero-subcontainer">
-                    <h1>Latest News</h1>
+                    <h1 style="font-size: 2.25rem; line-height: 1.25; font-weight: 700; text-align: center;">Latest News</h1>
                     
                 </div>
             </div>
         </section>
+        <script>
+            const btn = document.querySelector(".menu-btn");
+            const nav = document.querySelector(".nav-list");
+
+            // Toggle menu when button is clicked
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation(); // prevent document click from firing
+                nav.classList.toggle("active");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove("active");
+                }
+            });
+        </script>
+    </body>
