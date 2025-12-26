@@ -7,6 +7,10 @@
 </head>
 <body>
     <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="subscribe.html">Subscribe</a>
+        </nav>
         <h1>Subscribe to Our Newsletter</h1>
         <p>Stay updated with our latest news and updates</p>
     </header>
@@ -15,11 +19,64 @@
         <section class="subscribe-section">
             <h2>Join Our Community</h2>
             <p>Get exclusive content delivered straight to your inbox</p>
+            
+            <form id="subscribeForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interests">Interests</label>
+                    <select id="interests" name="interests">
+                        <option value="">Select your interest</option>
+                        <option value="technology">Technology</option>
+                        <option value="education">Education</option>
+                        <option value="news">News & Updates</option>
+                        <option value="events">Events</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to receive newsletters and updates
+                    </label>
+                </div>
+                
+                <button type="submit">Subscribe Now</button>
+            </form>
+            
+            <div class="benefits">
+                <h3>Why Subscribe?</h3>
+                <ul>
+                    <li>Weekly updates on campus activities</li>
+                    <li>Exclusive academic resources</li>
+                    <li>Early access to event announcements</li>
+                    <li>Tips and career guidance</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="social-section">
+            <h3>Follow Us on Social Media</h3>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 UDSM. All rights reserved.</p>
+        <p>Contact us: info@udsm.ac.tz</p>
     </footer>
 </body>
 </html>
