@@ -1,74 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscribe - Newsletter</title>
+    <title>Subscribe - Group21</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            margin-bottom: 1rem;
-        }
-
-        nav a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #764ba2;
-        }
-
-        header h1 {
-            color: #667eea;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        main {
+        /* Your custom styles for subscribe page */
+        .subscribe-container {
             max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
         }
 
         .subscribe-section {
             background: white;
             padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .subscribe-section h2 {
-            color: #667eea;
+            color: #4f46e5;
             font-size: 2rem;
             margin-bottom: 1rem;
             text-align: center;
@@ -76,7 +28,7 @@
 
         .subscribe-section > p {
             text-align: center;
-            color: #666;
+            color: #6b7280;
             margin-bottom: 2rem;
             font-size: 1.1rem;
         }
@@ -88,8 +40,8 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #333;
-            font-weight: bold;
+            color: #374151;
+            font-weight: 600;
         }
 
         .form-group input[type="text"],
@@ -97,80 +49,85 @@
         .form-group select {
             width: 100%;
             padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.25rem;
             font-size: 1rem;
             transition: border-color 0.3s;
+            box-sizing: border-box;
         }
 
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #4f46e5;
         }
 
         .form-group input[type="checkbox"] {
             margin-right: 8px;
         }
 
-        button[type="submit"] {
+        .submit-btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 0.25rem;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: opacity 0.2s;
         }
 
-        button[type="submit"]:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        .submit-btn:hover {
+            opacity: 0.9;
         }
 
         .benefits {
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 2px solid #f0f0f0;
+            border-top: 2px solid #f3f4f6;
         }
 
         .benefits h3 {
-            color: #667eea;
+            color: #4f46e5;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .benefits ul {
             list-style: none;
+            padding: 0;
         }
 
         .benefits li {
             padding: 0.5rem 0;
             padding-left: 1.5rem;
             position: relative;
+            color: #4b5563;
         }
 
         .benefits li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #4f46e5;
             font-weight: bold;
         }
 
         .social-section {
-            background: rgba(255, 255, 255, 0.95);
+            background: white;
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 0.5rem;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
         }
 
         .social-section h3 {
-            color: #667eea;
+            color: #4f46e5;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .social-links {
@@ -183,73 +140,70 @@
         .social-links a {
             display: inline-block;
             padding: 10px 20px;
-            background: #667eea;
+            background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.2s;
+            border-radius: 0.25rem;
+            transition: opacity 0.2s;
         }
 
         .social-links a:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            text-align: center;
-            margin-top: 2rem;
-            color: #666;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
+            opacity: 0.9;
         }
 
         .success-message {
             display: none;
             padding: 15px;
-            background: #4caf50;
+            background: #10b981;
             color: white;
-            border-radius: 8px;
+            border-radius: 0.25rem;
             margin-bottom: 1rem;
             text-align: center;
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
             .subscribe-section {
                 padding: 1.5rem;
-            }
-
-            .social-links {
-                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="subscribe.html">Subscribe</a>
-        </nav>
-        <h1>Subscribe to Our Newsletter</h1>
-        <p>Stay updated with our latest news and updates</p>
-    </header>
+    <nav>
+        <div class="navcontainer">
+            <h1>Group21</h1>
+            <div class="tabs-container">
+                <ul class="nav-tabs">
+                    <li><a class="nav-links" href="index.html">Home</a></li>
+                    <li><a class="nav-links" href="#">About</a></li>
+                    <li><a class="nav-links" href="#">Services</a></li>
+                </ul> 
+            </div>
+            <div class="menu-container">   
+                <ul class="nav-list">
+                    <li><a class="nav-links" href="#">Gallery</a></li>
+                    <li><a class="nav-links" href="#">News</a></li>
+                    <li><a class="nav-links" href="#">Events</a></li>
+                    <li><a class="nav-links" href="subscribe.html">Subscribe</a></li>
+                    <li><a class="nav-links" href="#">FAQs</a></li>
+                    <li><a class="nav-links" href="#">Blog</a></li>
+                    <li><a class="nav-links" href="#">Contacts</a></li>
+                    <li><a class="nav-links" href="#">Feedback</a></li>
+                </ul>
+                
+                <button class="menu-btn"><img src="images/icons/menu_icon.png" ></button>                  
+            </div>
+        </div>
+    </nav>
 
-    <main>
+    <div class="subscribe-container">
         <section class="subscribe-section">
             <div class="success-message" id="successMessage">
                 Thank you for subscribing! Check your email for confirmation.
             </div>
             
-            <h2>Join Our Community</h2>
-            <p>Get exclusive content delivered straight to your inbox</p>
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest news and updates</p>
             
             <form id="subscribeForm">
                 <div class="form-group">
@@ -280,7 +234,7 @@
                     </label>
                 </div>
                 
-                <button type="submit">Subscribe Now</button>
+                <button type="submit" class="submit-btn">Subscribe Now</button>
             </form>
             
             <div class="benefits">
@@ -303,20 +257,35 @@
                 <a href="#">LinkedIn</a>
             </div>
         </section>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2024 UDSM. All rights reserved.</p>
-        <p>Contact us: info@udsm.ac.tz</p>
+        © 2025 Group21. All rights reserved.
     </footer>
 
     <script>
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav-list");
+
+        // Toggle menu when button is clicked
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            nav.classList.toggle("active");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove("active");
+            }
+        });
+
+        // Form submission
         document.getElementById('subscribeForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const interests = document.getElementById('interests').value;
             
             if (name && email) {
                 document.getElementById('successMessage').style.display = 'block';
