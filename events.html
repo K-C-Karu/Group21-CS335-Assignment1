@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="events-section">
+    <h1>Events</h1>
+    <p class="intro">Stay informed about our upcoming and past events.</p>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button onclick="filterEvents('all')" class="active">All</button>
+        <button onclick="filterEvents('upcoming')">Upcoming</button>
+        <button onclick="filterEvents('past')">Past</button>
+    </div>
+
+    <!-- Events Container -->
+    <div class="events-container">
+
+        <div class="event-card upcoming">
+            <h2>Web Development Workshop</h2>
+            <p>📅 5 March 2026</p>
+            <p>🕒 0800 hours - 1100 hours</p>
+            <p>📍 Nkurumah Hall</p>
+            <p>Learn modern web technologies and best practices.</p>
+        </div>
+
+          <div class="event-card upcoming">
+            <h2>Digital Marketing Workshop</h2>
+            <p>📅 20 February 2026</p>
+            <p>🕒 0800 hours - 1100 hours</p>
+            <p>📍 UDSM New Library</p>
+            <p>Get to Know Digital Marketing Fundamentals.</p>
+        </div>
+
+        <div class="event-card upcoming">
+            <h2>AI & Innovation Seminar</h2>
+            <p>📅 29 January 2026</p>
+            <p>🕒 0800 hours - 1100 hours</p>
+            <p>📍 Conference Room</p>
+            <p>Discover how AI is transforming the digital world.</p>
+        </div>
+
+        <div class="event-card past hidden">
+            <h2>Startup Networking Event</h2>
+            <p>📅 10 November 2025</p>
+            <p>🕒 0800 hours - 1100 hours</p>
+            <p>📍 Nkurumah Hall</p>
+            <p>Connected entrepreneurs and innovators.</p>
+        </div>
+
+        <div class="event-card past hidden">
+            <h2>Tech Innovation Comference</h2>
+            <p>📅 01 September 2025</p>
+            <p>🕒 0800 hours - 1100 hours</p>
+            <p>📍 Innovation Hub</p>
+            <p>Tech Developers Came Together To Discuss Innovation Techniques.</p>
+        </div>
+
+        <div class="event-card past hidden">
+            <h2>Python Developers Meetup</h2>
+            <p>📅 22 July 2025</p>
+            <p>🕒 0800 hours - 1100 hours</p>
+            <p>📍 Luhanga Hall</p>
+            <p>Python and AI-Related Developers Met to Discuss about Data Science and Artificial Intelligence.</p>
+        </div>
+    </div>
+    <button id="showMoreBtn" onclick="showMore()">Show More</button>
+</section>
+
+<script>
+    function filterEvents(type) {
+        const events = document.querySelectorAll('.event-card');
+        const buttons = document.querySelectorAll('.filter-buttons button');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        events.forEach(eventCard => {
+            if (type === 'all') {
+                eventCard.style.display = 'block';
+            } else if (eventCard.classList.contains(type)) {
+                eventCard.style.display = 'block';
+            } else {
+                eventCard.style.display = 'none';
+            }
+        });
+    }
+
+    function showMore() {
+        const hiddenEvents = document.querySelectorAll('.event-card.hidden');
+        hiddenEvents.forEach(event => {
+            event.classList.remove('hidden');
+        });
+
+        document.getElementById('showMoreBtn').style.display = 'none';
+    }
+</script>
+</body>
+</html>
