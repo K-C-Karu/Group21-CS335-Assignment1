@@ -277,5 +277,35 @@
     <footer>
         © 2025 Group21. All rights reserved.
     </footer>
+        <script>
+        // Mobile menu toggle (same as landing page)
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav-list");
+
+        // Toggle menu when button is clicked
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // prevent document click from firing
+            nav.classList.toggle("active");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove("active");
+            }
+        });
+
+        // Mark current page as active in navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-links');
             
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
+</html>          
