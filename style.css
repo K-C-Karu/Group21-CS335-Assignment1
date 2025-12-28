@@ -193,9 +193,65 @@ nav {
 
 
 
-/* =========================
-   MEMBER: DAVINA
-   ========================= */
+/* Custom CSS for the registration modal */
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;    
+}
+
+.feedback-container {
+    width: 400px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    color:blueviolet;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    font-weight:bold;
+}
+
+input, textarea {
+width: 200px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*Space between email and feedback box */
+textarea {
+margin-top: 10px;
+height: 120px;
+resize: vertical;
+}
+
+button {
+margin-top: 20px;
+width: 25%;
+padding: 12px;
+background-color: blueviolet;
+color: white;
+border: black;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
 
 
 
