@@ -280,6 +280,18 @@ section {
         }
     }
 
+footer{
+    text-align: center;
+    font-size: 0.875rem;  
+    line-height: 1.25rem; 
+    margin-top: auto;
+    padding: 0.75rem 0;  
+    width: 100%;
+    border-top: 1px solid rgb(55, 65, 81);   
+    background-color: rgb(17, 24, 39);      
+    color: rgb(156, 163, 175);
+    }
+
 /* =========================
    MEMBER: DAVINA
    ========================= */
