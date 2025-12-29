@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribe - Group21</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Your custom styles for subscribe page */
+        .subscribe-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .subscribe-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .subscribe-section h2 {
+            color: #4f46e5;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .subscribe-section > p {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        .benefits {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #f3f4f6;
+        }
+
+        .benefits h3 {
+            color: #4f46e5;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #4b5563;
+        }
+
+        .benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+
+        .social-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .social-section h3 {
+            color: #4f46e5;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+            color: white;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            transition: opacity 0.2s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.9;
+        }
+
+        .success-message {
+            display: none;
+            padding: 15px;
+            background: #10b981;
+            color: white;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .subscribe-section {
+                padding: 1.5rem;
+            }
+        }
+          footer{
+            text-align: center;
+            font-size: 0.875rem;  
+            line-height: 1.25rem; 
+            margin-top: auto;
+            padding: 0.75rem 0;  
+            width: 100%;  
+            background-color: rgb(248, 248, 250);      
+            color: rgb(10, 10, 10);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navcontainer">
+            <h1>Group21</h1>
+            <div class="tabs-container">
+                <ul class="nav-tabs">
+                    <li><a class="nav-links" href="index.html">Home</a></li>
+                    <li><a class="nav-links" href="about.html">About</a></li>
+                    <li><a class="nav-links" href="services.html">Services</a></li>
+                </ul> 
+            </div>
+            <div class="menu-container">   
+                <ul class="nav-list">
+                    <li><a class="nav-links" href="gallery.html">Gallery</a></li>
+                    <li><a class="nav-links" href="news.html">News</a></li>
+                    <li><a class="nav-links" href="events.html">Events</a></li>
+                    <li><a class="nav-links" href="subscribe.html">Subscribe</a></li>
+                    <li><a class="nav-links" href="faqs.html">FAQs</a></li>
+                    <li><a class="nav-links" href="blog.html">Blog</a></li>
+                    <li><a class="nav-links" href="contacts.html">Contacts</a></li>
+                    <li><a class="nav-links" href="feedback.html">Feedback</a></li>
+                </ul>
+
+                <button class="menu-btn"><img src="images/icons/menu_icon.png" ></button>                  
+            </div>
+        </div>
+    </nav>
+
+    <div class="subscribe-container">
+        <section class="subscribe-section">
+            <div class="success-message" id="successMessage">
+                Thank you for subscribing! Check your email for confirmation.
+            </div>
+            
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest news and updates</p>
+            
+            <form id="subscribeForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interests">Interests</label>
+                    <select id="interests" name="interests">
+                        <option value="">Select your interest</option>
+                        <option value="technology">Technology</option>
+                        <option value="education">Education</option>
+                        <option value="news">News & Updates</option>
+                        <option value="events">Events</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to receive newsletters and updates
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Subscribe Now</button>
+            </form>
+            
+            <div class="benefits">
+                <h3>Why Subscribe?</h3>
+                <ul>
+                    <li>Weekly updates on campus activities</li>
+                    <li>Exclusive academic resources</li>
+                    <li>Early access to event announcements</li>
+                    <li>Tips and career guidance</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="social-section">
+            <h3>Follow Us on Social Media</h3>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 Group21. All rights reserved.
+    </footer>
+
+    <script>
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav-list");
+
+        // Toggle menu when button is clicked
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            nav.classList.toggle("active");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove("active");
+            }
+        });
+
+        // Form submission
+        document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            if (name && email) {
+                document.getElementById('successMessage').style.display = 'block';
+                
+                setTimeout(() => {
+                    document.getElementById('subscribeForm').reset();
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

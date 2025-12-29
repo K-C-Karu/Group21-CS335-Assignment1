@@ -271,6 +271,134 @@ nav {
 /* =========================
    MEMBER: GIFT
    ========================= */
+.blog-hero {
+    background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+    color: white;
+    padding: 4rem 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.blog-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.blog-hero p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.blog-search {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.blog-search input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.25rem 0 0 0.25rem;
+    font-size: 1rem;
+}
+
+.blog-search button {
+    background-color: rgb(79 70 229);
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 0 0.25rem 0.25rem 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.blog-search button:hover {
+    background-color: rgb(67 56 202);
+}
+
+/* Main Blog Layout */
+.blog-main {
+    flex: 1;
+    padding: 0 1.5rem;
+}
+
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.blog-post.featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post.featured .post-image {
+    position: relative;
+    min-height: 300px;
+}
+
+.blog-post.featured img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-post.featured .post-content {
+    padding: 2rem;
+}
+
+.blog-post {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.blog-post:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.post-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover .post-image img {
+    transform: scale(1.05);
+}
 
 
 
@@ -283,7 +411,63 @@ nav {
 /* =========================
    MEMBER: KLEIST
    ========================= */
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
 
+.header {
+    background: #C8102E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 15px;
+}
+
+.news-content h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.news-content .date {
+    font-size: 12px;
+    color: gray;
+    margin: 5px 0;
+}
+
+.news-content p {
+    font-size: 14px;
+    line-height: 1.5;
+}
 
 
 
@@ -304,16 +488,150 @@ nav {
 /* =========================
    MEMBER: GIDEON
    ========================= */
+.events-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+    }
 
+.events-section h1 {
+    text-align: center;
+    color: rgb(67 56 202 / var(--tw-text-opacity, 1));
+    }
 
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    }
 
+#showMoreBtn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    }
 
+#showMoreBtn:hover {
+    background: #012955;
+    }
 
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 25px;
+    }
 
+.filter-buttons button {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    background: rgb(67 56 202 / var(--tw-text-opacity, 1));
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+.filter-buttons button.active,
+.filter-buttons button:hover {
+    background: #014186;
+}
 
-/* =========================
-   MEMBER: DAVINA
-   ========================= */
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    }
+
+.event-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+.event-card h2 {
+    color: rgb(67 56 202 / var(--tw-text-opacity, 1));
+    }
+
+.event-card p {
+    color: #444;
+    margin: 5px 0;
+    }
+
+.hidden {
+    display: none;
+    }
+
+@media (max-width: 600px) {
+    .events-section {
+    padding: 20px 10px;
+        }
+    }
+
+/* Custom CSS for the registration modal */
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;    
+}
+
+.feedback-container {
+    width: 400px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    color:blueviolet;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    font-weight:bold;
+}
+
+input, textarea {
+width: 200px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*Space between email and feedback box */
+textarea {
+margin-top: 10px;
+height: 120px;
+resize: vertical;
+}
+
+button {
+margin-top: 20px;
+width: 25%;
+padding: 12px;
+background-color: blueviolet;
+color: white;
+border: black;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
 
 
 
@@ -351,4 +669,4 @@ nav {
 
 /* =========================
    MEMBER: OLARIP
-   ========================= */
+ ========================= */
