@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <section class="events-section">
     <h1>Events</h1>
     <p class="intro">Stay informed about our upcoming and past events.</p>
@@ -99,6 +98,22 @@
 
         document.getElementById('showMoreBtn').style.display = 'none';
     }
+
+    const btn = document.querySelector(".menu-btn");
+    const nav = document.querySelector(".nav-list");
+
+    // Toggle menu when button is clicked
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent document click from firing
+        nav.classList.toggle("active");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !btn.contains(e.target)) {
+        nav.classList.remove("active");
+        }
+    });
 </script>
 </body>
 </html>
