@@ -24,7 +24,6 @@
         }
         
         body {
-            font-family: 'Georgia', serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--white);
@@ -107,156 +106,7 @@
             margin: 0 auto;
             opacity: 0.9;
         }
-        
-        /* Mission Section */
-        .mission-section {
-            padding: 4rem 0;
-            background-color: var(--light-gray);
-        }
-        
-        .mission-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .mission-text h2 {
-            color: var(--primary-color);
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .mission-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .mission-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        
-        .stat-box {
-            background: var(--white);
-            padding: 2rem;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--secondary-color);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* Values Section */
-        .values-section {
-            padding: 4rem 0;
-        }
-        
-        .values-section h2 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        
-        .value-card {
-            padding: 2rem;
-            background: var(--light-gray);
-            border-top: 4px solid var(--secondary-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .value-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        /* Team Section */
-        .team-section {
-            padding: 4rem 0;
-            background-color: var(--light-gray);
-        }
-        
-        .team-section h2 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-        
-        .team-member {
-            background: var(--white);
-            padding: 1.5rem;
-            text-align: center;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-5px);
-        }
-        
-        .team-photo {
-            border-radius: 50%;     
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-          
-            
-        
-            
-            
-        }
-        
-        .team-member h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .team-role {
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            font-style: italic;
-        }
-        
-       
-        
+              
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-about h1 {
@@ -279,15 +129,11 @@
                 gap: 1.5rem;
             }
         }
-
-         
-
-        </style>
+    </style>
 
     </head>
     <body>
-
-         <nav>
+        <nav>
             <div class="navcontainer">
                 <h1>Group21</h1>
                 <div class="tabs-container">
@@ -302,8 +148,8 @@
                         <li><a class="nav-links" href="gallery.html">Gallery</a></li>
                         <li><a class="nav-links" href="news.html">News</a></li>
                         <li><a class="nav-links" href="events.html">Events</a></li>
-                        <li><a class="nav-links" href="subscribe.htmtl">Subscribe</a></li>
-                        <li><a class="nav-links" href="faq.html">FAQs</a></li>
+                        <li><a class="nav-links" href="subscribe.html">Subscribe</a></li>
+                        <li><a class="nav-links" href="faqs.html">FAQs</a></li>
                         <li><a class="nav-links" href="blog.html">Blog</a></li>
                         <li><a class="nav-links" href="contacts.html">Contacts</a></li>
                         <li><a class="nav-links" href="feedback.html">Feedback</a></li>
@@ -315,16 +161,16 @@
         </nav>
 
 
-<!-- Hero Section -->
-    <section class="hero-about">
+        <!-- Hero Section -->
+        <section class="hero-about">
         <div class="container">
             <h1>About SimpleInformationHub</h1>
             <p>Delivering truth, transparency, and timely news to readers worldwide since 2010</p>
         </div>
-    </section>
+        </section>
 
-    <!-- Mission Section -->
-    <section class="mission-section">
+        <!-- Mission Section -->
+        <section class="mission-section">
         <div class="container">
             <div class="mission-content">
                 <div class="mission-text">
@@ -352,10 +198,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Values Section -->
-    <section class="values-section">
+        <!-- Values Section -->
+        <section class="values-section">
         <div class="container">
             <h2>Our Core Values</h2>
             <div class="values-grid">
@@ -391,10 +237,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
+        <!-- Team Section -->
+        <section class="team-section">
         <div class="container">
             <h2>Meet Our Leadership Team</h2>
             <div class="team-grid">
@@ -420,16 +266,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
-        
-        
-        
-        
-        
-        
-        
+        </section>
         <footer>
                 © 2025 Group21. All rights reserved.
         </footer>
@@ -450,3 +287,5 @@
                 }
             });
         </script>
+    </body>
+</html>
