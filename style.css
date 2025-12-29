@@ -273,12 +273,6 @@ body {
   padding: 0 var(--spacing-md);
 }
 
-
-
-
-
-
-
 /* Services Section */
 .services-section {
   padding: var(--spacing-2xl) 0;
@@ -452,8 +446,6 @@ body {
   color: var(--color-primary);
   transform: translateY(-2px);
 }
-
-
 
 /* Animations */
 @keyframes fadeInUp {
