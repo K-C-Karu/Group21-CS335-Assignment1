@@ -6,6 +6,92 @@
     <title>About Us - NewsHub</title>
     <link href="style.css" rel="stylesheet" type="text/css">
 
+     <style>
+        /* ============================================
+           GLOBAL CSS - Base styles for entire site
+           ============================================ */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: rgb(152, 57, 230);
+            --text-color: #333;
+            --light-gray: #f8f9fa;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+        
+        /* Global Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Arial', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Global Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--white);
+            font-family: 'Arial', sans-serif;
+        }
+        
+        
+        
+       
+        
+         footer{
+                text-align: center;
+                font-size: 0.875rem;  
+                line-height: 1.25rem; 
+                margin-top: auto;
+                padding: 0.75rem 0;  
+                width: 100%;
+                border-top: 1px solid rgb(55, 65, 81);   
+                background-color: rgb(17, 24, 39);      
+                color: rgb(156, 163, 175);
+            }
+    </style>
+
     </head>
     <body>
 
