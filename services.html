@@ -6,13 +6,36 @@
         <meta charset="UTF-8">
         <link href="style.css" rel="stylesheet" type="text/css">
         <style>
-             .hero {
-                background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
-                color: white;
-                padding-top: 5rem;
-                padding-bottom: 5rem;
-            }
-            .hero-container {
+            
+            
+            .hero {
+                    background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+                    color: white;
+                    padding: var(--spacing-2xl) 0;
+                    text-align: center;
+                  }
+
+            .hero-content {
+                  max-width: 800px;
+                  margin: 0 auto;
+                  animation: fadeInUp 0.8s ease;
+                }
+
+            .hero-title {
+                  font-size: 3rem;
+                  font-weight: 700;
+                  margin-bottom: var(--spacing-md);
+                  line-height: 1.2;
+                  text-wrap: balance;
+                }
+
+            .hero-subtitle {
+                    font-size: 1.25rem;
+                    margin-bottom: var(--spacing-xl);
+                    opacity: 0.95;
+                    line-height: 1.6;
+                  }
+     .hero-container {
                 max-width: 1200px; 
                 margin:auto;
                 padding-left: 1.5rem;  
@@ -34,21 +57,27 @@
             .hero-subcontainer div > * + * {
                 margin-left: 1rem; 
             }
+    
 
-            .btn {
-                background-color:transparent;
-                padding: 0.5rem 1.5rem;  
-                border: 0.0625rem solid white; 
-                border-radius: 0.25rem;              
-                font-weight: 600;               
-                cursor: pointer;
-                transition: background-color 0.2s ease;
-            }
 
-            .btn:hover {
-                background-color: rgb(255, 255, 255); 
-                color: rgb(79, 70, 229);
-            }
+.cta-button {
+                  background-color: white;
+                  color: var(--color-primary);
+                  border: none;
+                  padding: var(--spacing-md) var(--spacing-xl);
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                  border-radius: 50px;
+                  cursor: pointer;
+                  transition: var(--transition);
+                  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                }
+
+                cta-button:hover {
+                  transform: translateY(-2px);
+                  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+                }
+
 
             .features {
                 padding-top: 5rem;              
