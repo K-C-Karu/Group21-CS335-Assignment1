@@ -1,306 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Group21 | News & Updates</title>
-
-    <!-- =========================
-         INTERNAL CSS STYLING
-         ========================= -->
-    <style>
-        /* ===== GLOBAL RESET & BASE ===== */
-        body {
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
-    color: rgb(17 24 39 / var(--tw-text-opacity, 1));
-    min-height: 100dvh;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0;
-    margin: 0;
-}
-
-        /* =========================
-           NAVIGATION BAR (FROM INDEX)
-           ========================= */
-       nav {
-    max-width:100%;
-    max-height:4.75rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.navcontainer {
-    position:relative;
-    max-height:4.75rem;
-    max-width: 1000px;
-    margin: auto;
-    padding: 1rem 1.5rem;
-    display: flex;
-    flex-wrap:nowrap;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing:border-box;
-    
-}
-
-.tabs-container {
-    display:flex;
-    flex-direction:row;
-}
-
-.nav-tabs {
-    display: flex;
-    flex-direction: row;    
-    list-style: none;
-    margin:auto;
-    
-    gap: 1rem;
-    flex-wrap: wrap;
-    overflow:hidden;
-    min-width: 0;
-    --tw-text-opacity: 1;
-    color: rgb(55 65 81 / var(--tw-text-opacity, 1));
-}
-
-.navcontainer h1{
-    font-size: 1.5rem;   
-    line-height: 1.75rem;
-    font-weight: 700;
-    --tw-text-opacity: 1;
-    color: rgb(67 56 202 / var(--tw-text-opacity, 1));
-}
-
-.nav-list.active {
-    display: flex;
-}
-
-.nav-links {
-    display: inline-block;   
-    text-decoration: none;
-    color: black;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 4px;
-}
-
-.nav-links:hover {
-    color: rgb(79 70 229);
-    border-color:rgb(78, 70, 229);
-    cursor: pointer;
-}
-
-.menu-btn {
-    position:absolute;
-    top:14.5rem;
-    left:4.625rem;
-    font-size: 1.5rem;
-    padding-top:0.35rem;
-    background: none;
-    border-style:solid;
-    border-radius:0.25rem;
-    border-color:transparent;
-    display:block;
-    margin-top:auto;
-    margin-bottom:auto;
-}
-
-.menu-btn:hover {
-    border-color:rgb(82, 81, 81);
-    cursor: pointer;
-}
-
-.menu-container {
-    position:relative;
-    right: 0;             
-    transition: right 1.0s ease-in-out;
-    padding: 0;
-    margin: 0;
-    width:12.5rem;
-    height:31.25rem;
-    box-sizing:border-box;
-}
-
-@media (min-width: 1250px) {
-    .menu-container {
-        right:-6.25rem;
-    }
-}
-
-@media (min-width: 1149px) {
-    .menu-container {
-        right:-3.25rem;
-    }
-}
-
-.nav-list {
-    list-style: none;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    overflow:hidden;
-    min-width: 0;
-    --tw-text-opacity: 1;
-    color: rgb(55 65 81 / var(--tw-text-opacity, 1));
-    width:6.95rem;
-    display: none;
-    position: absolute;
-    top:16.5rem;
-    background: white;
-    padding: 0.75rem 0.75rem 1.25rem 4.25rem;
-    flex-direction: column;
-    box-shadow: -2px 6px 7px rgba(0,0,0,0.1);
-}
-
-        /* =========================
-           NEWS HERO SECTION
-           ========================= */
-        .news-hero {
-            background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
-            color: white;
-            padding: 4rem 1.5rem;
-            text-align: center;
-        }
-
-        .news-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .news-hero p {
-            font-size: 1.125rem;
-            max-width: 700px;
-            margin: auto;
-        }
-
-        /* =========================
-           MAIN NEWS LAYOUT
-           ========================= */
-        .news-container {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 2.5rem;
-        }
-
-        /* FEATURED ARTICLE */
-        .featured-news {
-            background: white;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-        }
-
-        .featured-content {
-            padding: 2rem;
-        }
-
-        .featured-content span {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: rgb(79, 70, 229);
-        }
-
-        .featured-content h2 {
-            margin: 0.75rem 0;
-            font-size: 1.75rem;
-        }
-
-        .featured-content p {
-            color: rgb(75, 85, 99);
-            line-height: 1.6;
-        }
-
-        /* REGULAR NEWS GRID */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .news-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-            transition: all 0.2s ease-in-out;
-        }
-
-        .news-card span {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: rgb(79, 70, 229);
-        }
-
-        .news-card h3 {
-            margin: 0.75rem 0;
-            font-size: 1.125rem;
-        }
-
-        .news-card p {
-            color: rgb(75, 85, 99);
-            line-height: 1.5;
-        }
-
-        /* SIDEBAR */
-        .news-sidebar {
-            background: white;
-            padding: 1.75rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-            height: fit-content;
-        }
-
-        .news-sidebar h3 {
-            margin-bottom: 1.25rem;
-            border-bottom: 2px solid rgb(99, 102, 241);
-            padding-bottom: 0.5rem;
-        }
-
-        .sidebar-item {
-            margin-bottom: 1.25rem;
-        }
-
-        .sidebar-item span {
-            font-size: 0.75rem;
-            color: rgb(107, 114, 128);
-        }
-
-        .sidebar-item p {
-            margin: 0.25rem 0 0;
-            font-weight: 500;
-        }
-
-        /* FOOTER */
-        footer {
-            margin-top: 5rem;
-            padding: 1rem;
-            text-align: center;
-            background-color: rgb(17, 24, 39);
-            color: rgb(156, 163, 175);
-            font-size: 0.875rem;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .news-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
+<style>
+    
+    /* FOOTER */
+    footer {
+        margin-top: 5rem;
+        padding: 1rem;
+        text-align: center;
+        background-color: rgb(17, 24, 39);
+        color: rgb(156, 163, 175);
+        font-size: 0.875rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+        .news-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
 
 <body>
 
     <!-- =========================
          NAVIGATION BAR
-         ========================= -->
+          =========================  -->
     <nav>
         <div class="navcontainer">
-            <h1>Group21</h1>
 
+            <h1>Group21</h1>
             <div class="tabs-container">
                 <ul class="nav-tabs">
                     <li><a class="nav-links" href="index.html">Home</a></li>
@@ -330,7 +64,8 @@
 
     <!-- =========================
          NEWS HERO
-         ========================= -->
+        =========================  -->
+
     <section class="news-hero">
         <h1>Latest News & Updates</h1>
         <p>Official announcements, platform updates, and important information from Group21.</p>
@@ -338,30 +73,78 @@
 
     <!-- =========================
          MAIN CONTENT
-         ========================= -->
+        =========================  -->
+
     <main class="news-container">
 
         <div>
-            <article class="featured-news">
-                <div class="featured-content"
-     style="background:url('image1.jpg') center/cover no-repeat;padding:2.5rem;opacity:0.8; ">
-    <span style=" font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">
-        Latest News
-    </span>
+            <article class="featured-news" style="position:relative;overflow:hidden;border-radius:0.5rem;">
 
-    <h2 style="margin:0.75rem 0;font-size:1.8rem;line-height:1.3;font-weight:700;opacity:1; ">
-        Tech and Market Developments Shape Investor Outlook
-    </h2>
+                <div class="featured-slider">
 
-    <p style="max-width:700px;font-size:1rem;line-height:1.6;opacity:1;color:#060000;">
-        Technology stocks showed mixed performance today as investors reacted to
-        new industry updates, shifting market trends, and evolving digital
-        infrastructure developments.
-    </p>
+                    <!-- Slide 1: Game of the Year -->
+                    <div class="featured-content active"
+                        style="background:url('image1.jpg') center/cover no-repeat;padding:2.5rem;">
+                        <span>Gaming</span>
+                        <h2>Game of the Year Awards 2025 Ignite Industry Buzz</h2>
+                        <p style="color: #fff;">
+                            Major studios and indie developers alike gained attention as the 2025
+                            Game of the Year awards reshaped expectations for future releases.
+                        </p>
+                    </div>
 
-     </div>
+                    <!-- Slide 2: Meme of the Year -->
+                    <div class="featured-content"
+                        style="background:url('image2.jpg') center/cover no-repeat;padding:2.5rem;">
+                        <span>Internet Culture</span>
+                        <h2>The Rise of the “6 7” Meme Dominates 2025</h2>
+                        <p style="color: #fff;">
+                            Viral trends point to the “6 7” meme becoming a defining symbol of online
+                            culture this year, spreading rapidly across social platforms.
+                        </p>
+                    </div>
+
+                    <!-- Slide 3: Football Stars -->
+                    <div class="featured-content"
+                        style="background:url('image3.jpg') center/cover no-repeat;padding:2.5rem;">
+                        <span>Football</span>
+                        <h2>2026 World Cup May Mark the End of a Legendary Era</h2>
+                        <p style="color: #fff;">
+                            With stars like Lionel Messi, Cristiano Ronaldo, Kevin De Bruyne,
+                            and Virgil van Dijk nearing the twilight of their careers, the 2026
+                            World Cup could signal a historic transition in global football.
+                        </p>
+                    </div>
+
+                    <!-- Slide 4: Market Fluctuations -->
+                    <div class="featured-content"
+                        style="background:url('image4.jpg') center/cover no-repeat;padding:2.5rem;">
+                        <span>Markets</span>
+                        <h2>Gold and Bitcoin Prices Show Extreme Volatility</h2>
+                        <p style="color: #fff;">
+                            Analysts note sharp price swings in both gold and Bitcoin, highlighting
+                            growing uncertainty across traditional and digital assets.
+                        </p>
+                    </div>
+
+                    <!-- Slide 5: Tech -->
+                    <div class="featured-content"
+                        style="background:url('image5.jpg') center/cover no-repeat;padding:2.5rem;">
+                        <span>Technology</span>
+
+                        <h2> Tech and Market Developments Shape Investor Outlook</h2>
+                        <p style="color: #fff;">
+                            Technology stocks traded unevenly as investors assessed new digital
+                            infrastructure trends and shifting global market signals.
+                        </p>
+                    </div>
+
+
+                </div>
 
             </article>
+
+
 
             <section class="news-grid">
                 <article class="news-card">
@@ -407,14 +190,14 @@
 
     <!-- =========================
          FOOTER
-         ========================= -->
+          =========================  -->
     <footer>
         © 2025 Group21. All rights reserved.
     </footer>
 
     <!-- =========================
          NAVIGATION JS (FROM INDEX)
-         ========================= -->
+          =========================  -->
     <script>
         const btn = document.querySelector(".menu-btn");
         const nav = document.querySelector(".nav-list");
@@ -431,6 +214,20 @@
                 nav.classList.remove("active");
             }
         });
+
+        //slider script
+        const slides = document.querySelectorAll(".featured-content");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 6000); // change slide every 6 seconds
     </script>
 
 </body>
