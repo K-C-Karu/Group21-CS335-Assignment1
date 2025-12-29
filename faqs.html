@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs Page</title>
+     <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+            footer{
+                text-align: center;
+                font-size: 0.875rem;  
+                line-height: 1.25rem; 
+                padding: 0.75rem 0;  
+                width: 100%;   
+                background-color: rgb(249, 249, 249);      
+                color: rgb(7, 8, 10);
+            }
+        h1 {
+            color: rgb(67 56 202);
+            text-align: center;
+            margin: 40px;
+        }
+        .faq {
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+            position: relative;
+            padding-right: 20px;
+        }
+        .question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+        }
+        .question.active::after {
+            content: '-';
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+     <nav>
+            <div class="navcontainer">
+                <h1>Group21</h1>
+                <div class="tabs-container">
+                    <ul class="nav-tabs">
+                        <li><a class="nav-links" href="index.html">Home</a></li>
+                        <li><a class="nav-links" href="about.html">About</a></li>
+                        <li><a class="nav-links" href="services.html">Services</a></li>
+                    </ul> 
+                </div>
+                <div class="menu-container">   
+                    <ul class="nav-list">
+                        <li><a class="nav-links" href="gallery.html">Gallery</a></li>
+                        <li><a class="nav-links" href="news.html">News</a></li>
+                        <li><a class="nav-links" href="events.html">Events</a></li>
+                        <li><a class="nav-links" href="subscribe.html">Subscribe</a></li>
+                        <li><a class="nav-links" href="faqs.html">faqs</a></li>
+                        <li><a class="nav-links" href="blog.html">Blog</a></li>
+                        <li><a class="nav-links" href="contacts.html">Contacts</a></li>
+                        <li><a class="nav-links" href="feedback.html">Feedback</a></li>
+                    </ul>
+                    
+                    <button class="menu-btn"><img src="images/icons/menu_icon.png" ></button>                  
+                </div>
+            </div>
+        </nav>
+    <h1>Frequently Asked Questions (FAQs)</h1>
+
+    <div class="faq">
+        <div class="question">What is this system used for?</div>
+        <div class="answer">This system is designed to help users [describe purpose here].</div>
+    </div>
+
+    <div class="faq">
+        <div class="question">How do I create an account?</div>
+        <div class="answer">To create an account, click the 'Sign Up' button and fill in your details.</div>
+    </div>
+
+    <div class="faq">
+        <div class="question">Is the system free to use?</div>
+        <div class="answer">Yes, the basic version of the system is free. Some advanced features may require payment.</div>
+    </div>
+
+    <div class="faq">
+        <div class="question">How can I reset my password if I forget it?</div>
+        <div class="answer">Click 'Forgot Password' on the login page and follow the instructions to reset your password.</div>
+    </div>
+
+    <div class="faq">
+        <div class="question">Who can I contact if I face a problem using the system?</div>
+        <div class="answer">You can contact our support team at zaawaadi@gmail.com for any issues.</div>
+    </div>
+
+     <footer>
+                © 2025 Group21. All rights reserved.
+        </footer>
+    <script>
+         const btn = document.querySelector(".menu-btn");
+            const nav = document.querySelector(".nav-list");
+
+            // Toggle menu when button is clicked
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation(); // prevent document click from firing
+                nav.classList.toggle("active");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove("active");
+                }
+            });
+        const questions = document.querySelectorAll('.question');
+        questions.forEach(q => {
+            q.addEventListener('click', () => {
+                q.classList.toggle('active');
+                const answer = q.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
