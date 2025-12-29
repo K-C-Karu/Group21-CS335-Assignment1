@@ -186,15 +186,6 @@ nav {
 /* =========================
    MEMBER: GIDEON
    ========================= */
-section {
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
-    color: rgb(17 24 39 / var(--tw-text-opacity, 1));
-    min-height: 100dvh;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0;
-    margin: 0;
-}
-
 .events-section {
     max-width: 1000px;
     margin: auto;
