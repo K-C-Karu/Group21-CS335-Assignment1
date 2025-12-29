@@ -320,6 +320,112 @@
         </nav>
 
 
+<!-- Hero Section -->
+    <section class="hero-about">
+        <div class="container">
+            <h1>About SimpleInformationHub</h1>
+            <p>Delivering truth, transparency, and timely news to readers worldwide since 2010</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2>Our Mission</h2>
+                    <p>At NewsHub, we believe in the power of journalism to inform, inspire, and create positive change. Our mission is to deliver accurate, unbiased, and comprehensive news coverage that empowers our readers to make informed decisions.</p>
+                    <p>We are committed to upholding the highest standards of journalistic integrity, ensuring that every story we publish is thoroughly researched, fact-checked, and presented with fairness and balance.</p>
+                </div>
+                <div class="mission-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">15M+</span>
+                        <span class="stat-label">Monthly Readers</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries Covered</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Journalists</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">News Coverage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <span class="value-icon">🎯</span>
+                    <h3>Accuracy</h3>
+                    <p>We verify every fact and source to ensure the information we provide is reliable and trustworthy.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">⚖️</span>
+                    <h3>Impartiality</h3>
+                    <p>We present all sides of a story without bias, allowing readers to form their own informed opinions.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">🔍</span>
+                    <h3>Transparency</h3>
+                    <p>We are open about our sources, methods, and any potential conflicts of interest in our reporting.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">🌍</span>
+                    <h3>Global Perspective</h3>
+                    <p>We cover stories from around the world, ensuring diverse voices and perspectives are heard.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">⚡</span>
+                    <h3>Timeliness</h3>
+                    <p>We deliver breaking news as it happens while maintaining our commitment to accuracy.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">💡</span>
+                    <h3>Innovation</h3>
+                    <p>We embrace new technologies and storytelling methods to enhance our journalism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo"><img src="images/grace/w1.jpg" ></div>
+                    <h3>Jane Smith</h3>
+                    <p class="team-role">Editor-in-Chief</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo"><img src="images/grace/w1.jpg" ></div>
+                    <h3>Michael Davis</h3>
+                    <p class="team-role">Managing Editor</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo"><img src="images/grace/w1.jpg" ></div>
+                    <h3>Sarah Chen</h3>
+                    <p class="team-role">Head of Investigations</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo"><img src="p4.jpg" ></div>
+                    <h3>Robert Patel</h3>
+                    <p class="team-role">Technology Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
         
