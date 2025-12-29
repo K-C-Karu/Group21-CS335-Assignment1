@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 30px 58px 30px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #4f46e5;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        .contact-container form button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-container form button:hover {
+            opacity: 0.9;
+        }
+
+        .social-section {
+            background: white;
+            max-width: 600px;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+        }
+
+        .social-section h3 {
+            color: #4f46e5;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(to right, rgb(168, 85, 247), rgb(99, 102, 241));
+            color: white;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            transition: opacity 0.2s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.9;
+        }
+
+        footer{
+            text-align: center;
+            font-size: 0.875rem;  
+            line-height: 1.25rem; 
+            margin-top: auto;
+            padding: 0.75rem 0;  
+            width: 100%;  
+            background-color: rgb(248, 248, 250);      
+            color: rgb(10, 10, 10);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navcontainer">
+            <h1>Group21</h1>
+            <div class="tabs-container">
+                <ul class="nav-tabs">
+                    <li><a class="nav-links" href="index.html">Home</a></li>
+                    <li><a class="nav-links" href="about.html">About</a></li>
+                    <li><a class="nav-links" href="services.html">Services</a></li>
+                </ul> 
+            </div>
+            <div class="menu-container">   
+                <ul class="nav-list">
+                    <li><a class="nav-links" href="gallery.html">Gallery</a></li>
+                    <li><a class="nav-links" href="news.html">News</a></li>
+                    <li><a class="nav-links" href="events.html">Events</a></li>
+                    <li><a class="nav-links" href="subscribe.html">Subscribe</a></li>
+                    <li><a class="nav-links" href="faqs.html">FAQs</a></li>
+                    <li><a class="nav-links" href="blog.html">Blog</a></li>
+                    <li><a class="nav-links" href="contacts.html">Contacts</a></li>
+                    <li><a class="nav-links" href="feedback.html">Feedback</a></li>
+                </ul>
+                
+                <button class="menu-btn"><img src="images/icons/menu_icon.png" ></button>                  
+            </div>
+        </div>
+    </nav>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you. Fill out the form below.</p>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Your email">
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <section class="social-section">
+        <h3>Could Also Contact Us on Social Media</h3>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </section>
+    <footer>
+        © 2025 Group21. All rights reserved.
+    </footer>
+    <script>
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav-list");
+
+        // Toggle menu when button is clicked
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // prevent document click from firing
+            nav.classList.toggle("active");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!nav.contains(e.target) && !btn.contains(e.target)) {
+            nav.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>
