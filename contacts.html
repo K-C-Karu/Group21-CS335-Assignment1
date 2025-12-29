@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        footer{
+            text-align: center;
+            font-size: 0.875rem;  
+            line-height: 1.25rem; 
+            margin-top: auto;
+            padding: 0.75rem 0;  
+            width: 100%;  
+            background-color: rgb(248, 248, 250);      
+            color: rgb(10, 10, 10);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navcontainer">
+            <h1>Group21</h1>
+            <div class="tabs-container">
+                <ul class="nav-tabs">
+                    <li><a class="nav-links" href="index.html">Home</a></li>
+                    <li><a class="nav-links" href="#">About</a></li>
+                    <li><a class="nav-links" href="services.html">Services</a></li>
+                </ul> 
+            </div>
+            <div class="menu-container">   
+                <ul class="nav-list">
+                    <li><a class="nav-links" href="gallery.html">Gallery</a></li>
+                    <li><a class="nav-links" href="#">News</a></li>
+                    <li><a class="nav-links" href="events.html">Events</a></li>
+                    <li><a class="nav-links" href="subscribe.html">Subscribe</a></li>
+                    <li><a class="nav-links" href="faqs.html">FAQs</a></li>
+                    <li><a class="nav-links" href="blog.html">Blog</a></li>
+                    <li><a class="nav-links" href="#">Contacts</a></li>
+                    <li><a class="nav-links" href="feedback.html">Feedback</a></li>
+                </ul>
+                
+                <button class="menu-btn"><img src="images/icons/menu_icon.png" ></button>                  
+            </div>
+        </div>
+    </nav>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you. Fill out the form below.</p>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Your email">
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <section class="social-section">
+        <h3>Could Also Contact Us on Social Media</h3>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </section>
+    <footer>
+        © 2025 Group21. All rights reserved.
+    </footer>
+    <script>
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".nav-list");
+
+        // Toggle menu when button is clicked
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // prevent document click from firing
+            nav.classList.toggle("active");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!nav.contains(e.target) && !btn.contains(e.target)) {
+            nav.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>
